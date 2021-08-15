@@ -180,7 +180,7 @@
 }
 
 .order__section {
-  background: url(../img/formbg.jpg) center center/cover no-repeat;
+  background: url(./img/formbg.jpg) center center/cover no-repeat;
   background-color: #2B2B2B;
   color: #FFFFFF;
 }
@@ -203,7 +203,7 @@
   position: relative;
 }
 .benefits__item:before {
-  content: url("../img/separatordots.png");
+  content: url("./img/separatordots.png");
   position: absolute;
   top: 57px;
   right: 0;
@@ -431,7 +431,7 @@
   border-radius: 4px;
 }
 .radio--checkbox .radio__visible::before {
-  background: url(../img/checked.png) center center no-repeat;
+  background: url(./img/checked.png) center center no-repeat;
 }
 
 .radio__elem {
@@ -465,7 +465,7 @@
 
 .fixed-menu {
   position: fixed;
-  top: 20%;
+  top: 30%;
   right: 3%;
   z-index: 100;
 }
@@ -499,7 +499,7 @@
 }
 
 .map-section {
-  background: url("../img/map.svg") center center/cover no-repeat;
+  background: url("./img/map.svg") center center/cover no-repeat;
 }
 
 .footer {
