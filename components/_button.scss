@@ -1,0 +1,45 @@
+.button {
+  font-size: 16px;
+  font-weight: 800;
+  border-radius: 100px;
+  text-transform: uppercase;
+  padding: 21px 41px;
+  line-height: 1;
+  
+}
+.button__container {
+  display: flex;
+  margin-top: auto;
+}
+.button--color--yellow {
+  background: #FEDB3F;
+  color: #000000;
+
+  &:hover {
+    background: #000000;
+    color: #FEDB3F;
+    transition: 0.6s;
+  }
+}
+
+.button--color--transparent {
+font-size: 18px;
+font-weight: 400;
+color: white;
+text-transform: none;
+background: none;
+padding: 21px 20px;
+&:hover {
+  color: $mustard;
+  transition: 0.6s;
+}
+}
+
+.button--color--mustard {
+background: $mustard;
+&:hover {
+  background: #000000;
+  color: $mustard;
+  transition: 0.6s;
+}
+}

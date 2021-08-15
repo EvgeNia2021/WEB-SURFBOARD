@@ -1,0 +1,45 @@
+.hero__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  padding-top: 24px;
+  padding-bottom: 65px;
+}
+
+
+.logo {
+  display: block;
+    
+    top: 29px;
+    left: 0;
+    max-width: 85px;
+}
+
+.hero {
+  background: url("./img/hero2.jpg") center center / cover no-repeat;
+  background-color: #1968B1;
+  height: 100vh;
+  
+  color: #fff;
+}
+
+.hero__header {
+  font-size: 48px;
+  text-transform: uppercase;
+  font-weight: bold;
+  line-height: 1.2;
+  margin-bottom: 19px;
+  
+}
+
+.hero__motto {
+  font-size: 21px;
+  font-weight: 400;
+  margin-bottom: 38px;
+  padding-right: 4%;
+}
+
+.hero__text-section {
+  width: 40%;
+}

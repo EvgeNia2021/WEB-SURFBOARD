@@ -1,0 +1,89 @@
+
+$containerWidth: 940px;
+$baseFontSize: 18px;
+
+// colors
+$black: #292929;
+$grey: #666666;
+$lightgrey: #F8FAF9;
+$mustard: #FFD517;
+
+//z-index positions
+$z-fixed-menu: 100;
+
+// normalize
+@import url('./css/layout/normalize.css');
+
+// setups
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@300;400;500;700;800;900&display=swap');
+@import url('./css/layout/base.css');
+
+// components 
+@import "./components/_features.scss";
+@import "./components/_feature.scss";
+@import "./components/_hero.scss";
+@import "./components/_button.scss";
+@import "./components/_section.scss";
+@import "./components/_benefits.scss";
+@import "./components/_benefit.scss";
+@import "./components/_reviews.scss";
+@import "./components/_interactive-avatar.scss";
+@import "./components/_form.scss";
+@import "./components/_form-controls.scss";
+@import "./components/_radio.scss";
+@import "./components/_fixed-menu.scss";
+@import "./components/_map.scss";
+@import "./components/_footer.scss";
+@import "./components/_social.scss";
+@import "./components/_contacts.scss";
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+.menu {
+  
+
+&__list {
+  display: flex;
+  align-items: center;
+}
+
+&__item {
+  margin-right: 22px;
+  display: flex;
+  justify-content: space-between;
+
+}
+
+&__item:last-child {
+  margin-right: 0;
+}
+
+
+
+&__link {
+  font-weight: 700;
+  text-decoration: none;
+}
+
+
+}
+
+.phone-number {
+font-size: 22px;
+text-decoration: none;
+display: flex;
+align-items: center;
+}
+
+.phone-number__img {
+  width: 13px;
+  height: 13px;
+  margin-right: 6px;
+}
+
+
