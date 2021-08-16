@@ -100,7 +100,7 @@
   line-height: 1;
 }
 
-.button__container {
+.hero__button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -268,7 +268,7 @@
   margin-bottom: 15px;
 }
 
-.reviews__display--inner {
+.reviews__display-inner {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -289,6 +289,7 @@
 .reviews__content {
   width: 54%;
   margin-left: 40px;
+  padding: 26px 0;
 }
 
 .reviews__title {
@@ -296,7 +297,6 @@
   font-weight: 700;
   color: #292929;
   margin-bottom: 8px;
-  margin-top: 28px;
 }
 
 .reviews__text {
@@ -375,6 +375,9 @@
   display: flex;
   margin-bottom: 5px;
 }
+.form__row:last-child {
+  margin-bottom: 0;
+}
 
 .form__block {
   -webkit-box-flex: 1;
@@ -410,6 +413,9 @@
       flex-wrap: wrap;
   margin-bottom: 18px;
 }
+.form__controls:last-child {
+  margin-bottom: 0;
+}
 
 .form__controls-container {
   margin-top: 31px;
@@ -432,6 +438,9 @@
 }
 .radio--checkbox .radio__visible::before {
   background: url(./img/checked.png) center center no-repeat;
+}
+.radio:last-child {
+  margin-right: 0;
 }
 
 .radio__elem {
@@ -471,6 +480,9 @@
 }
 .fixed-menu__item {
   margin-bottom: 12px;
+}
+.fixed-menu__item:last-child {
+  margin-bottom: 0;
 }
 .fixed-menu__link {
   width: 18px;
