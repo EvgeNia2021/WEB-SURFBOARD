@@ -1,0 +1,36 @@
+.menu {
+
+  margin: 0 30px;
+  padding-top: 4px;
+  @include tablets {
+    display: none;
+  }
+
+&__list {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+&__item {
+  margin-right: rem(22px);
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+
+}
+
+&__item:last-child {
+  margin-right: 0;
+}
+
+
+
+&__link {
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+}
+}
+

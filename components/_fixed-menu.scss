@@ -4,8 +4,12 @@
   right: 3%;
   z-index: $z-fixed-menu;
 
+  @include tablets {
+    display: none;
+  }
+
   &__item {
-    margin-bottom: 12px;
+    margin-bottom: rem(12px);
 
     &:last-child {
       margin-bottom: 0;
@@ -14,18 +18,18 @@
    
 
   &__link {
-    width: 18px;
-    height: 18px;
+    width: rem(18px);
+    height: rem(18px);
     border-radius: 50%;
-    border: 1px solid transparent;
+    border: rem(1px) solid transparent;
     display: block;
     position: relative;
 
     &::before {
       display: block;
       content: "";
-      width: 8px;
-      height: 8px;
+      width: rem(8px);
+      height: rem(8px);
       border-radius: 50%;
       background: white;
       position: absolute;

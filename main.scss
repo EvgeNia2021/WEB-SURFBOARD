@@ -2,6 +2,11 @@
 $containerWidth: 940px;
 $baseFontSize: 18px;
 
+//breakpoints 
+
+$tablets: 768px;
+$phones: 480px;
+
 // colors
 $black: #292929;
 $grey: #666666;
@@ -11,17 +16,25 @@ $mustard: #FFD517;
 //z-index positions
 $z-fixed-menu: 100;
 
+@import "media";
+
 // normalize
 @import url('./css/layout/normalize.css');
 
 // setups
 @import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@300;400;500;700;800;900&display=swap');
-@import url('./css/layout/base.css');
+@import "./components/_layout.scss";
+
+
+
+
 
 // components 
 @import "./components/_features.scss";
 @import "./components/_feature.scss";
+@import "./components/_header.scss";
 @import "./components/_hero.scss";
+@import "./components/_menu.scss";
 @import "./components/_button.scss";
 @import "./components/_section.scss";
 @import "./components/_benefits.scss";
@@ -36,54 +49,9 @@ $z-fixed-menu: 100;
 @import "./components/_footer.scss";
 @import "./components/_social.scss";
 @import "./components/_contacts.scss";
-
-.header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-
-.menu {
-  
-
-&__list {
-  display: flex;
-  align-items: center;
-}
-
-&__item {
-  margin-right: 22px;
-  display: flex;
-  justify-content: space-between;
-
-}
-
-&__item:last-child {
-  margin-right: 0;
-}
+@import "./components/_hamburger.scss";
 
 
 
-&__link {
-  font-weight: 700;
-  text-decoration: none;
-}
-
-
-}
-
-.phone-number {
-font-size: 22px;
-text-decoration: none;
-display: flex;
-align-items: center;
-}
-
-.phone-number__img {
-  width: 13px;
-  height: 13px;
-  margin-right: 6px;
-}
 
 
