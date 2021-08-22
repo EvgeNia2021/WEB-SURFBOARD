@@ -1,6 +1,40 @@
 .social {
-  margin-right: 74px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-top: 12px;
+}
+
+.social__item {
+  margin-right: 14px;
+
+  @include phones {
+    margin-right: 17px;
+  }
+}
+
+.fb-icon, .insta-icon {
+  width: 20px;
+  height: 20px;
+  fill: #B3B3B3;
+}
+
+.vk-icon {
+  width: 20px;
+  height: 11px;
+  fill: #B3B3B3;
+}
+
+.tw-icon {
+  width: 20px;
+  height: 17px;
+
+  fill: #B3B3B3;
+}
+
+.vk-icon, .tw-icon, .insta-icon, .fb-icon {
+&:hover {
+  fill: #000000;
+  transition: 0.9s;
+}
 }

@@ -6,9 +6,27 @@
   &:last-child {
     margin-bottom: 0;
   }
+
+  @include tablets {
+    margin-bottom: rem(18px);
+    justify-content: flex-start;
+    align-items: baseline;
+    
+  }
+
+  @include phones {
+    justify-content: center;
+    align-items: baseline;
+    margin-bottom: rem(18px);
+
+  }
 }
 
 .form__controls-container {
 margin-top: rem(31px);
 margin-bottom: rem(46px);
+
+@include tablets {
+  margin-top: rem(23px);
+}
 }

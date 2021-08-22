@@ -7,8 +7,12 @@
   
 }
 
-.header__phone-number {
+.header .header__phone-number {
   @include tablets {
     display: none;
   }
+}
+
+.header .phone-number__icon {
+  fill: white;
 }

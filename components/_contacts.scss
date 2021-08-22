@@ -3,6 +3,13 @@
   font-weight: 400;
   color: $black;
   font-style: normal;
+
+  @include phones {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 19px;
+  }
 }
 
 .phone-number {
@@ -13,6 +20,10 @@
 
   &__text {
     white-space: nowrap;
+  }
+
+  @include phones {
+    
   }
   }
   
@@ -25,4 +36,12 @@
   
   .phone-number__icon {
     flex-shrink: 0;
+    margin-right: 7px;
+  }
+
+  .contacts__text {
+  
+    @include phones {
+      margin-bottom: rem(12px);
+    }
   }

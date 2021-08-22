@@ -2,7 +2,20 @@
   display: flex;
   cursor: pointer;
   user-select: none;
+  align-items: center;
   margin-right: rem(12px);
+
+  @include tablets {
+    margin-bottom: 	rem(10px);
+    &:last-child {
+      margin-bottom: 0;
+    } }
+    @include phones {
+      margin-bottom: 	rem(10px);
+      &:last-child {
+        margin-bottom: 0;
+      }
+  }
 
   &--checkbox {
     .radio__visible {

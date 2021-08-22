@@ -5,11 +5,15 @@
   text-transform: uppercase;
   padding: rem(21px) rem(41px);
   line-height: 1;
+
+  @include phones {
+    padding: 21px 36px;
+  }
   
 }
 .hero__button {
   display: flex;
-  margin-top: auto;
+  
 }
 .button--color--yellow {
   background: #FEDB3F;
@@ -29,9 +33,14 @@ color: white;
 text-transform: none;
 background: none;
 padding: rem(21px) rem(20px);
+
+@include tablets {
+  padding: rem(21px) rem(24px);
+}
 &:hover {
   color: $mustard;
   transition: 0.6s;
+
 }
 }
 
@@ -42,4 +51,14 @@ background: $mustard;
   color: $mustard;
   transition: 0.6s;
 }
+}
+
+.form__buttons .button  {
+
+  @include tablets {
+  margin-right: rem(15px);
+
+  &:last-child {
+    margin-right: 0;
+  }}
 }

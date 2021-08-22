@@ -1,7 +1,7 @@
 .menu {
-
+padding-top: 4px;
   margin: 0 30px;
-  padding-top: 4px;
+  
   @include tablets {
     display: none;
   }

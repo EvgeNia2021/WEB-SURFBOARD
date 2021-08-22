@@ -44,7 +44,16 @@
   text-transform: uppercase;
   font-weight: bold;
   line-height: 1.2;
-  margin-bottom: rem(14px);
+  margin-bottom: rem(10px);
+  
+  @include tablets {
+   
+        padding: 0 2%;
+      }
+  @include phones {
+line-height: 1.0;
+    padding: 0 1%;
+  }
   
 }
 
@@ -52,7 +61,7 @@
   font-size: rem(21px);
   font-weight: 400;
   margin-bottom: rem(47px);
-  padding-right: 4%;
+  padding: 0 2%;
 
 }
 

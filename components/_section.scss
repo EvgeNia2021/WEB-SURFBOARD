@@ -4,6 +4,7 @@
   flex-direction: column;
   justify-content: center;
   
+  
 }
 
 .section__title {
@@ -13,17 +14,33 @@
   color: $black;
   text-transform: uppercase;
   text-align: center;
+
+  @include phones {
+    margin-bottom: rem(26px);
+  }
 }
 .headline {
   text-align: center;
   margin-bottom: rem(49px);
+
+  @include phones {
+    margin-bottom: rem(62px);
+  }
 }
 .headline__title {
   margin-bottom: rem(11px);
+
+  @include phones {
+    margin-bottom: rem(4px);
+  }
 }
 .headline__subtitle {
   padding: 0 27%;
   font-weight: 400;
+
+  @include phones {
+    padding: 0 3%;
+  }
 }
 
 .order__section {
@@ -34,5 +51,13 @@
   .section__title {
     color: #FFFFFF;
     margin-bottom: rem(52px);
+
+    @include tablets {
+      margin-bottom: rem(30px);
+    }
+
+    @include phones {
+      margin-bottom: rem(30px);
+    }
   }
 }

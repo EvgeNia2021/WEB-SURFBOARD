@@ -1,5 +1,10 @@
 .benefit {
 text-align: center;
+
+@include phones {
+  display: flex;
+  text-align: left;
+}
 }
 
 .benefit__image-wrapper {
@@ -11,6 +16,15 @@ text-align: center;
   border-radius: 50%;
   overflow: hidden;
   margin-bottom: rem(5px);
+
+  @include tablets {
+    margin-bottom: rem(15px);
+  }
+
+  @include phones {
+    margin-bottom: 0;
+    margin-right: rem(12px);
+  }
 }
 
 .benefit__icon {
@@ -22,8 +36,7 @@ text-align: center;
   transform: translate(-50%, -50%);
 }
 
-  .thin--icon {
-    width: rem(44px); }
+  
  
     .benefit__desc {
 font-weight: 300;
@@ -34,4 +47,13 @@ color: $black;
 font-weight: 700;
 font-size: rem(27px);
 margin-bottom: rem(16px);
+
+@include tablets {
+  margin-bottom: rem(7px);
+}
+
+@include phones {
+  margin-bottom: rem(9px);
+}
+
     }
