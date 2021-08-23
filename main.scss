@@ -6,6 +6,7 @@ $baseFontSize: 18px;
 
 $tablets: 768px;
 $phones: 480px;
+$phones440: 440px;
 $phones320: 320px;
 
 // colors
@@ -17,7 +18,7 @@ $mustard: #FFD517;
 //z-index positions
 $z-fixed-menu: 100;
 
-@import "media";
+@import "_media";
 
 // normalize
 @import url('./css/layout/normalize.css');
