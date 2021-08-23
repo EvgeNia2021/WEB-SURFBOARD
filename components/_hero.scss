@@ -3,8 +3,17 @@
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
+  width: 100%;
   padding-top: rem(24px);
   padding-bottom: rem(65px);
+  
+
+  @include tablets {
+    padding-top: 0;
+    
+  }
+
+
 }
 
 
@@ -26,7 +35,8 @@
 }
 
 .hero__text-section {
-  width: 40%;
+  width: 41%;
+  padding: 0 1%;
 
   @include tablets {
     width: 100%;
@@ -61,7 +71,7 @@ line-height: 1.0;
   font-size: rem(21px);
   font-weight: 400;
   margin-bottom: rem(47px);
-  padding: 0 2%;
+  
 
 }
 

@@ -4,9 +4,22 @@
   display: none;
   flex-direction: column;
   justify-content: space-between;
+  position: absolute;
+  top: 3%;
+  right: 5%;
+
   @include tablets {
     display: inline-flex;
   }
+
+  @include phones {
+    right: 3%;
+  }
+  @include phones320 {
+    top: 2%;
+        right: 3%;
+  }
+
 }
 
 .hamburger__line {

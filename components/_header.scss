@@ -2,8 +2,27 @@
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
+  padding: 0 1%;
 
- 
+ @include tablets {
+   background: #1968B1;
+   padding: 0 3%;
+   height: rem(91px);
+   align-items: center;
+ }
+ @include phones {
+  background: #1968B1;
+  padding: 0 3%;
+  height: rem(91px);
+   align-items: center;
+}
+
+@include phones320 {
+  background: #1968B1;
+  padding: 0 3%;
+  height: rem(91px);
+   align-items: center;
+}
   
 }
 

@@ -1,6 +1,6 @@
 .features {
   display: flex;
-
+  padding: 0 1%;
   @include tablets {
     display: none;
   }

@@ -3,11 +3,27 @@
     justify-content: space-between;
     align-items: center;
     margin-top: 12px;
+
+   
+    @include phones {
+      margin-top: 0;
+    }
+
+    @include phones320 {
+      margin-top: 0;
+    }
 }
 
 .social__item {
   margin-right: 14px;
 
+  &:last-child {
+    margin-right: 0;
+  }
+
+  @include tablets {
+    margin-top: 0;
+  }
   @include phones {
     margin-right: 17px;
   }
