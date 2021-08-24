@@ -4,7 +4,7 @@
   display: none;
   flex-direction: column;
   justify-content: space-between;
-  position: absolute;
+  position: fixed;
   top: 3%;
   right: 5%;
 
@@ -15,7 +15,7 @@
   @include phones {
     right: 3%;
   }
-  @include phones320 {
+  @include phones440 {
     top: 2%;
         right: 3%;
   }

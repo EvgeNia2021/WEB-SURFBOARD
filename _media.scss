@@ -20,8 +20,3 @@
   }
 }
 
-@mixin phones320 {
-  @media screen and (max-width: $phones320) {
-    @content;
-  }
-}

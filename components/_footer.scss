@@ -13,7 +13,7 @@
       height: 151px;
     }
 
-    @include phones320 {
+    @include phones440 {
       height: 151px;
     }
 
@@ -33,7 +33,7 @@
         
         justify-content: center;
       }
-      @include phones320 {
+      @include phones440 {
         padding: 0;
       }
 

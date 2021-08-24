@@ -15,11 +15,6 @@ html {
 }
 @media screen and (max-width: 440px) {
   html {
-    font-size: 11.7px;
-  }
-}
-@media screen and (max-width: 320px) {
-  html {
     font-size: 11.4px;
   }
 }
@@ -196,7 +191,7 @@ table {
             align-items: center;
   }
 }
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 440px) {
   .header {
     background: #1968B1;
     padding: 0 3%;
@@ -243,7 +238,7 @@ table {
     width: 100%;
   }
 }
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 440px) {
   .hero__container {
     width: 100%;
   }
@@ -1086,7 +1081,7 @@ table {
     height: 151px;
   }
 }
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 440px) {
   .footer {
     height: 151px;
   }
@@ -1122,7 +1117,7 @@ table {
             justify-content: center;
   }
 }
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 440px) {
   .footer__container {
     padding: 0;
   }
@@ -1150,7 +1145,7 @@ table {
     margin-top: 0;
   }
 }
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 440px) {
   .social {
     margin-top: 0;
   }
@@ -1261,7 +1256,7 @@ table {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  position: absolute;
+  position: fixed;
   top: 3%;
   right: 5%;
 }
@@ -1277,7 +1272,7 @@ table {
     right: 3%;
   }
 }
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 440px) {
   .hamburger {
     top: 2%;
     right: 3%;

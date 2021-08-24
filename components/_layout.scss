@@ -10,11 +10,9 @@ html {
   }
 
   @include phones440 {
-    font-size: $baseFontSize - 6.3px;
-  }
-  @include phones320 {
     font-size: $baseFontSize - 6.6px;
   }
+
 
 
 }
