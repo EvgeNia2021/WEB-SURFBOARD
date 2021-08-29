@@ -1377,17 +1377,51 @@ table {
   display: -ms-flexbox;
   display: flex;
 }
+@media screen and (max-width: 768px) {
+  .product {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
 
 .product__icon {
   fill: #ECECEC;
   width: 22.0555555556rem;
   height: 21.0555555556rem;
 }
+@media screen and (max-width: 768px) {
+  .product__icon {
+    width: 17rem;
+    height: 16.2222222222rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .product__icon {
+    width: 15.5555555556rem;
+  }
+}
 
 .product__imageBlock {
-  width: 45%;
-  margin-right: 5%;
-  overflow: hidden;
+  margin-right: 8%;
+}
+@media screen and (max-width: 768px) {
+  .product__imageBlock {
+    margin-bottom: 2.2222222222rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .product__imageBlock {
+    margin-bottom: 2.7777777778rem;
+  }
 }
 
 .product__textBlock {
@@ -1400,13 +1434,41 @@ table {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  position: relative;
+}
+@media screen and (max-width: 768px) {
+  .product__container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+  }
 }
 
 .product__imageBlock-front {
   position: absolute;
   top: -3%;
   left: 1%;
+}
+@media screen and (max-width: 768px) {
+  .product__imageBlock-front {
+    width: 17.7777777778rem;
+    top: -3%;
+    left: 29%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .product__imageBlock-front {
+    width: 15.5555555556rem;
+    top: -1%;
+    left: 24%;
+  }
 }
 
 .product__imageBlock-back {
@@ -1415,8 +1477,14 @@ table {
 }
 
 .arrow-icon {
-  height: 1.5rem;
-  width: 0.7222222222rem;
+  height: 1.5555555556rem;
+  width: 0.8333333333rem;
+}
+@media screen and (max-width: 480px) {
+  .arrow-icon {
+    height: 1.8333333333rem;
+    width: 1.0555555556rem;
+  }
 }
 
 .product__subtitle-txt {
@@ -1429,9 +1497,29 @@ table {
 .product__subtitle {
   margin-bottom: 0.9444444444rem;
 }
+@media screen and (max-width: 768px) {
+  .product__subtitle {
+    margin-bottom: 0.2777777778rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .product__subtitle {
+    margin-bottom: 0.1666666667rem;
+  }
+}
 
 .product__desc-txt {
   margin-bottom: 0.6666666667rem;
+}
+@media screen and (max-width: 768px) {
+  .product__desc-txt {
+    margin-bottom: 1rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .product__desc-txt {
+    margin-bottom: 1.1666666667rem;
+  }
 }
 
 .product__price {
@@ -1439,12 +1527,33 @@ table {
   display: -ms-flexbox;
   display: flex;
 }
+@media screen and (max-width: 768px) {
+  .product__price {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
 
 .product__properties {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   margin-bottom: 0.5555555556rem;
+}
+@media screen and (max-width: 768px) {
+  .product__properties {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-bottom: 0.9444444444rem;
+  }
 }
 
 .product__button {
@@ -1466,42 +1575,58 @@ table {
   color: #292929;
   margin-right: 3.3333333333rem;
 }
-
-.product__dropdown {
-  width: 5.0555555556rem;
-  height: 5.0555555556rem;
-  position: relative;
-  background: #3A587E;
-  border-radius: 3%;
-  overflow: hidden;
-  margin-bottom: 2.7222222222rem;
-  position: relative;
-  cursor: pointer;
+@media screen and (max-width: 768px) {
+  .product__price-tag {
+    margin-right: 2.5rem;
+  }
 }
-
-.dropdown:hover .dropdown__menu {
-  left: 0;
-  opacity: 1;
+@media screen and (max-width: 480px) {
+  .product__price-tag {
+    margin-right: 2.6666666667rem;
+  }
 }
-
-.dropdown__icon {
-  position: absolute;
-  top: 17%;
-  left: 30%;
+@media screen and (max-width: 440px) {
+  .product__price-tag {
+    margin-right: 1.1111111111rem;
+  }
 }
 
 .products-slider__arrow--prev {
   z-index: 100;
   position: absolute;
-  top: 49%;
+  top: 50%;
   left: -9%;
+}
+@media screen and (max-width: 768px) {
+  .products-slider__arrow--prev {
+    top: 28%;
+    left: 18%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .products-slider__arrow--prev {
+    top: 25%;
+    left: 0;
+  }
 }
 
 .products-slider__arrow--next {
   z-index: 100;
   position: absolute;
-  top: 49%;
+  top: 50%;
   right: 5%;
+}
+@media screen and (max-width: 768px) {
+  .products-slider__arrow--next {
+    top: 28%;
+    right: 20%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .products-slider__arrow--next {
+    top: 25%;
+    right: 0%;
+  }
 }
 
 .products__section {
@@ -1510,6 +1635,91 @@ table {
 
 .product__desc {
   width: 80%;
+}
+@media screen and (max-width: 768px) {
+  .product__desc {
+    width: 100%;
+    padding: 0 111px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .product__desc {
+    width: 100%;
+    padding: 0 70px;
+  }
+}
+@media screen and (max-width: 440px) {
+  .product__desc {
+    width: 100%;
+    padding: 0 30px;
+  }
+}
+
+.coord-icon {
+  fill: white;
+  width: 2.1111111111rem;
+  height: 2.1111111111rem;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown__menu {
+  display: none;
+  position: absolute;
+  left: 100%;
+  top: 0;
+  background-color: rgba(255, 255, 255, 0.8);
+  -webkit-box-shadow: 4px 4px 40px 0px rgba(0, 0, 0, 0.06);
+          box-shadow: 4px 4px 40px 0px rgba(0, 0, 0, 0.06);
+  z-index: 1;
+  width: 15.1666666667rem;
+  height: 16.1666666667rem;
+  color: #000000;
+  padding: 1.6666666667rem 1.6666666667rem;
+}
+
+.dropdown__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.dropdown:hover .dropdown__menu {
+  display: block;
+}
+
+.dropdown__button {
+  width: 5.0555555556rem;
+  height: 5.0555555556rem;
+}
+
+.product__dropdown {
+  position: relative;
+  background: #3A587E;
+  border-radius: 3%;
+  margin-bottom: 2.5rem;
+  cursor: pointer;
+}
+@media screen and (max-width: 768px) {
+  .product__dropdown {
+    display: none;
+  }
+}
+
+.dropdown__icon {
+  position: absolute;
+  top: 17%;
+  left: 30%;
 }
 
 .dropdown__txt {
@@ -1522,8 +1732,69 @@ table {
   position: absolute;
 }
 
-.coord-icon {
-  fill: white;
-  width: 2.1111111111rem;
-  height: 2.1111111111rem;
+.dropdown__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 1.5555555556rem;
+  height: 1.3888888889rem;
+}
+
+.dropdown__item-text {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  text-align: start;
+  font-weight: 500;
+  font-size: 0.8888888889rem;
+}
+
+.dropdown__item-figures {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  font-size: 0.8888888889rem;
+  font-weight: 400;
+}
+
+.dropdown__item-icon {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.dropdown-icon {
+  width: 1.3333333333rem;
+  fill: #000000;
+}
+.dropdown-icon--1 {
+  height: 0.7777777778rem;
+}
+.dropdown-icon--2 {
+  height: 0.7777777778rem;
+}
+.dropdown-icon--3 {
+  height: 1.3333333333rem;
+}
+.dropdown-icon--4 {
+  height: 1.3333333333rem;
+  width: 1rem;
+}
+.dropdown-icon--5 {
+  height: 1.3333333333rem;
 }
