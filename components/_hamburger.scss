@@ -60,7 +60,9 @@
 .overlay-menu {
 
 visibility: hidden;
-transition: 0.9s;
+ opacity: 0;
+transition: 0.4s;
+
   position: fixed;
   top: 0;
   left: 0;
@@ -82,7 +84,8 @@ transition: 0.9s;
 
 .showMenu {
   visibility: visible;
-  transition: 0.9s;
+  opacity: 100%;
+  transition: 0.4s;
 } 
 .overlay-menu__list {
   display: flex;
