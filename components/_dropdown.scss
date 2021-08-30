@@ -68,7 +68,9 @@ justify-content: space-between;
 align-items: center;
 margin-bottom: rem(28px);
 height: rem(25px);
-
+ &:last-child {
+   margin-bottom: 0;
+ }
 
 }
 .dropdown__item-text {

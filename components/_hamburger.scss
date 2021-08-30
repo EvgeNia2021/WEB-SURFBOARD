@@ -1,4 +1,4 @@
-.hamburger__button-open {
+.overlay__button-open {
   display: none;
   width: 26px;
   height: 24px;
@@ -29,7 +29,7 @@
 
 }
 
-.hamburger__button-Xicon {
+.overlay__button-Xicon {
   display: none;
   opacity: 90%;
   position: fixed;
@@ -54,16 +54,13 @@
   }
 }
 
-/*.overlay {
-  
-}*/
-
 
 
 
 .overlay-menu {
 
-transform: translateY(-100%);
+visibility: hidden;
+transition: 0.9s;
   position: fixed;
   top: 0;
   left: 0;
@@ -73,7 +70,7 @@ transform: translateY(-100%);
   height: 100vh;
   background-color: #313131;
   padding-top: rem(135px);
-  transition: 0.9s;
+  transition: 0.6s;
   
   text-align: center;
   color: #FFFFFF;
@@ -84,7 +81,8 @@ transform: translateY(-100%);
 }
 
 .showMenu {
-  transform: translateY(0);
+  visibility: visible;
+  transition: 0.9s;
 } 
 .overlay-menu__list {
   display: flex;
@@ -105,14 +103,14 @@ transform: translateY(-100%);
 
 
 
-.ham__icon {
+.overlay__icon {
 width: 26px;
 height: 24px;
 fill: #fff;
 
 }
 
-.ham__icon-cross {
+.overlay__icon-cross {
   fill: #FFFFFF;
   width: 20px;
   height: 20px;
