@@ -1,7 +1,7 @@
 var menu = document.querySelector(".overlay-menu")
-var ham = document.querySelector(".hamburger__button")
-var xIcon = document.querySelector(".hamburger__button-Xicon")
-var menuIcon = document.querySelector(".hamburger__button-open")
+var ham = document.querySelector(".overlay__button")
+var xIcon = document.querySelector(".overlay__button-Xicon")
+var menuIcon = document.querySelector(".overlay__button-open")
 var body = document.querySelector("body")
 
 ham.addEventListener("click", toggleMenu)
