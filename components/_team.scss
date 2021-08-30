@@ -1,0 +1,100 @@
+.team {
+  display: flex;
+  
+@include tablets {
+  justify-content: center;
+}
+
+@include phones {
+  justify-content: center;
+}
+  
+}
+
+.team__photo {
+  width: 100%;
+  height: rem(290px);
+
+  margin-bottom: rem(21px);
+
+  @include tablets {
+    display: none;
+  }
+  @include phones {
+    display: none;
+  }
+}
+
+.team__list {
+  display: flex;
+
+  @include tablets {
+    flex-direction: column;
+    
+  }
+
+  @include phones {
+    flex-direction: column;
+    
+  }
+}
+
+.team__item {
+  margin-right: rem(20px);
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  @include tablets {
+    margin-bottom: rem(16px);
+    margin-right: 0;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+
+  @include phones {
+    margin-bottom: rem(16px);
+    margin-right: 0;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.team__text {
+ display: flex;
+ align-items: center;
+ justify-content: center;
+}
+
+.team__name {
+  font-size: rem(20px);
+  font-weight: 700;
+  color: $black;
+  margin-right: rem(4px);
+}
+
+.team-icon {
+  fill: #292929;
+  width: 9px;
+  height: 9px;
+}
+
+.team__section {
+  .section__title {
+    margin-bottom: rem(48px);
+
+    @include tablets {
+      margin-bottom: rem(30px);
+    }
+
+    @include phones {
+      margin-bottom: rem(30px);
+    }
+  }
+}

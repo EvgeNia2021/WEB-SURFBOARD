@@ -292,14 +292,66 @@
         </div>
 
       </section>
+<section class="section team__section">
+<div class="container">
+  <div class="section__title">Команда</div>
+  <div class="team">
+<ul class="team__list">
+  <li class="team__item">
+    <div class="team__photo">
+      <img src="./img/teamphoto1.jpg" alt="">
+    </div>
+    <div class="team__text">
+      <div class="team__name">Борис Федорович</div>
+      <div class="team__icon">
+        <svg class="team-icon">
+          <use xlink:href="./sprite.svg#acc-icon"></use>
+        </svg>
+      </div>
+    </div>
+  </li>
+  <li class="team__item">
+    <div class="team__photo"><img src="./img/teamphoto2.jpg" alt=""></div>
+    <div class="team__text">
+      <div class="team__name">Ольга Невзорова</div>
+      <div class="team__icon"> <svg class="team-icon">
+        <use xlink:href="./sprite.svg#acc-icon"></use>
+      </svg></div>
+    </div>
+  </li>
+  <li class="team__item">
+    <div class="team__photo"><img src="./img/teamphoto3.jpg" alt=""></div>
+    <div class="team__text">
+      <div class="team__name">Ингвар Нильсон</div>
+      <div class="team__icon"> <svg class="team-icon">
+        <use xlink:href="./sprite.svg#acc-icon"></use>
+      </svg></div>
+    </div>
+  </li>
+  <li class="team__item">
+    <div class="team__photo"><img src="./img/teamphoto4.jpg" alt=""></div>
+    <div class="team__text">
+      <div class="team__name">Екатерина Иванова</div>
+      <div class="team__icon"> <svg class="team-icon">
+        <use xlink:href="./sprite.svg#acc-icon"></use>
+      </svg></div>
+    </div>
+  </li>
+</ul>
+  </div>
+</div>
+
+</section>
+
+
       <section class="section reviews__section">
         <div class="container">
           <h1 class="section__title">Отзывы</h1>
           <div class="reviews">
-            <div class="reviews__display">
-              <div class="reviews__display-inner">
+            <ul class="reviews__display">
+              <li class="reviews__display-inner">
                 <div class="reviews__avatar">
-                  <img src="./img/avatar.png" alt="" class="reviews__avatar-img">
+                  <img src="./img/reviews1.png" alt="" class="reviews__avatar-img">
                 </div>
                 <article class="reviews__content">
                   <h3 class="reviews__title">Лучший дизайн</h3>
@@ -310,22 +362,48 @@
                   </div>
                   <div class="reviews__author">Ольга Макарова</div>
                 </article>
-              </div>
-            </div>
+              </li>
+              <li class="reviews__display-inner">
+                <div class="reviews__avatar">
+                  <img src="./img/reviews2.png" alt="" class="reviews__avatar-img">
+                </div>
+                <article class="reviews__content">
+                  <h3 class="reviews__title">Нереальная скорость</h3>
+                  <div class="reviews__text">
+                    <p>Я занимаюсь профессиональным спортом. Доверил изготовление доски для соревнований ребятам из Surfboard и не пожалел: 1 место на соревнованиях. 
+                      Нереальная скорость, устойчивая, удобная и легкая: всё что нужно для победы на соревнованиях!
+                      </p>
+                  </div>
+                  <div class="reviews__author">Марк Брюлов</div>
+                </article>
+              </li>
+              <li class="reviews__display-inner">
+                <div class="reviews__avatar">
+                  <img src="./img/reviews3.jpg" alt="" class="reviews__avatar-img">
+                </div>
+                <article class="reviews__content">
+                  <h3 class="reviews__title">Устойчивость и безопасность</h3>
+                  <div class="reviews__text">
+                    <p>Я заказывал доски для своих детей. Мне было важно, чтобы они были устойчивые, так как безопасность детей на первом месте. Доски были изготовлены по индивидуальным замерам с учетом роста и веса каждого ребенка. Теперь дети катаются и им нравится!</p>
+                  </div>
+                  <div class="reviews__author">Василий Поперечный</div>
+                </article>
+              </li>
+            </ul>
             <ul class="reviews__switcher">
               <li class="reviews__switcher-item interactive-avatar interactive-avatar--active">
                 <a href="" class="interactive-avatar__link">
-                  <img src="./img/avatar.png" alt="" class="interactive-avatar__img">
+                  <img src="./img/reviews1.png" alt="" class="interactive-avatar__img">
                 </a>
               </li>
               <li class="reviews__switcher-item interactive-avatar">
                 <a href="" class="interactive-avatar__link">
-                  <img src="./img/avatar.png" alt="" class="interactive-avatar__img">
+                  <img src="./img/reviews2.png" alt="" class="interactive-avatar__img">
                 </a>
               </li>
               <li class="reviews__switcher-item interactive-avatar">
                 <a href="" class="interactive-avatar__link">
-                  <img src="./img/avatar.png" alt="" class="interactive-avatar__img">
+                  <img src="./img/reviews3.jpg" alt="" class="interactive-avatar__img">
                 </a>
               </li>
             </ul>
@@ -402,7 +480,7 @@
                 </div>
               </div>
               <div class="form__buttons">
-                <button type="submit" class="button button--color--mustard">Заказать</button>
+                <button type="submit" class="button button--color--mustard" id="formBtn">Заказать</button>
                 <button type="reset" class="button button--color--transparent">Очистить</button>
               </div>
             </div>
@@ -487,9 +565,9 @@
       </li>
     </ul>
   </nav>
+
+    
   <div class="overlay">
-
-
     <nav class="overlay-menu" id="overlay">
       <ul class="overlay-menu__list">
         <li class="overlay-menu__item">
@@ -513,8 +591,20 @@
         </svg></span>
     </a>
   </div>
+
   <script src="./scripts/menu.js"></script>
   <script type="text/javascript"></script>
+  
+
+  <script type="html/template" id="modalTemplate">
+    <div class="modal__container">
+      <a href="#" class="close">
+
+      </a>
+      <div class="content"></div>
+    </div>
+  </script>
+  <script src="./scripts/modal.js"></script>
 </body>
 
 </html>
