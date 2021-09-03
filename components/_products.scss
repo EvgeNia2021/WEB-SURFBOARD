@@ -61,7 +61,7 @@ margin-bottom: rem(40px);
 .product__imageBlock-front {
 position: absolute;
 top: -3%;
-left: 1%;
+left: 6%;
 
 @include tablets {
   width: rem(320px);
@@ -80,7 +80,7 @@ left: 1%;
 .product__imageBlock-back {
   position: relative;
   padding-top: 21%;
-
+  left: 8%;
   
 }
 .arrow-icon {
@@ -194,7 +194,7 @@ margin-top: rem(25px);
   z-index: 100;
   position: absolute;
   top: 50%;
-    left: -9%;
+    left: 0%;
 
     @include tablets {
       top: 28%;
@@ -252,4 +252,11 @@ margin-top: rem(25px);
   fill: white;
   width: rem(38px);
   height: rem(38px);
+}
+
+
+.bx-wrapper {
+  border: 0;
+  box-shadow: none;
+  background: transparent;
 }

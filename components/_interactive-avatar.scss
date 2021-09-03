@@ -5,10 +5,9 @@
   border-radius: 50%;
   overflow: hidden;
   position: relative;
+  cursor: pointer;
 
-  &--active {
-    border-color: #FEDB3F;
-  }
+
 
   &:hover {
     border-color: #FEDB3F;
@@ -16,6 +15,10 @@
   }
 }
 
+
+.interactive-avatar.active {
+  border-color: #FEDB3F;
+}
 .interactive-avatar__link {
 position: absolute;
 top: 0;

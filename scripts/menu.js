@@ -1,4 +1,4 @@
-var menu = document.querySelector(".overlay-menu")
+var menu = document.querySelector(".overlay")
 var ham = document.querySelector(".overlay__button")
 var xIcon = document.querySelector(".overlay__button-Xicon")
 var menuIcon = document.querySelector(".overlay__button-open")

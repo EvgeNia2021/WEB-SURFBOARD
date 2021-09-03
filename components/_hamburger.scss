@@ -38,6 +38,7 @@
   top: 4%;
   right: 5%;
   cursor: pointer;
+  z-index: 100000;
 
   @include tablets {
  
@@ -59,7 +60,7 @@
 
 
 
-.overlay-menu {
+.overlay {
 
 visibility: hidden;
 opacity: 0;

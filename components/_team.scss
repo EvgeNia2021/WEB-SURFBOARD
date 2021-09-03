@@ -17,30 +17,65 @@
 
   margin-bottom: rem(21px);
 
-  @include tablets {
+  /*@include tablets {
     display: none;
   }
   @include phones {
     display: none;
+  }*/
+}
+
+.team__list.team__list--mobile {
+  display: none;
+
+  @include tablets {
+    display: block;
   }
 }
 
 .team__list {
   display: flex;
+  justify-content: space-between;
 
   @include tablets {
     flex-direction: column;
+    display: none;
+    padding: 0 10%;
+    align-items: center;
     
   }
 
   @include phones {
     flex-direction: column;
-    
+    display: none;
   }
+
+  @include phones440 {
+    display: none;
+  }
+}
+
+.team__list--desktop {
+  @include tablets {
+    display: none;
+  }
+
+  @include phones {
+    display: none;
+  }
+
+  @include phones440 {
+    display: none;
+  }
+
 }
 
 .team__item {
   margin-right: rem(20px);
+  flex: 1;
+  text-align: center;
+  position: relative;
+  max-width: rem(221px);
 
   &:last-child {
     margin-right: 0;
@@ -64,12 +99,24 @@
       margin-bottom: 0;
     }
   }
+
+  @include phones440 {
+    margin-bottom: rem(16px);
+    margin-right: 0;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
 }
 
 .team__text {
  display: flex;
  align-items: center;
  justify-content: center;
+ overflow: hidden;
+ transition: height 0.4s;
+ height: 0;
 }
 
 .team__name {
@@ -97,4 +144,41 @@
       margin-bottom: rem(30px);
     }
   }
+}
+
+.team__title {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: rem(8px);
+  cursor: pointer;
+}
+
+.team__list--desktop .team__text {
+  position: absolute;
+  top: 100%;
+}
+
+.team__text-position {
+  font-weight: 400;
+  
+  color: $black;
+  margin-bottom: rem(4px);
+
+  
+}
+
+.team__text-desc {
+  font-weight: 300;
+}
+
+.team__list--mobile { 
+  display: flex;
+  .team__text{
+flex-direction: column;
+  }
+
+
+
+
 }
