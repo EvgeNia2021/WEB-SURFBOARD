@@ -1,8 +1,12 @@
 .team {
   display: flex;
+
+  
   
 @include tablets {
   justify-content: center;
+
+
 }
 
 @include phones {
@@ -82,7 +86,7 @@
   }
 
   @include tablets {
-    margin-bottom: rem(16px);
+    margin-bottom: rem(10px);
     margin-right: 0;
 
     &:last-child {
@@ -127,6 +131,13 @@
 }
 
 .team-icon {
+  fill: #292929;
+  width: 9px;
+  height: 9px;
+}
+
+.team-icon__up {
+  display: none;
   fill: #292929;
   width: 9px;
   height: 9px;

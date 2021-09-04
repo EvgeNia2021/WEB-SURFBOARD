@@ -81,4 +81,7 @@
    <symbol  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 7" id="acc-icon">
     <path d="M4.5 7L0.602887 0.249999L8.39711 0.25L4.5 7Z"></path>
   </symbol>
+  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 8" id="acc-icon-up">
+    <path d="M4.00002 0.5L7.89713 7.25L0.102901 7.25L4.00002 0.5Z"></path>
+  </symbol>
 </svg>
