@@ -4,6 +4,15 @@
 
 .product {
   display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  width: inherit;
+  height: inherit;
+  float: left;
+ /*display: none;
+ opacity: 0;*/
+
   @include tablets {
     display: flex;
     flex-direction: column;
@@ -11,6 +20,12 @@
     align-items: center;
   }
 }
+
+/*.activeSlide {
+  display: block;
+opacity: 100%;
+transition: 0.5s;
+}*/
 
 .product__icon {
   fill: #ECECEC;
@@ -50,6 +65,7 @@ margin-bottom: rem(40px);
 
 .product__container {
   display: flex;
+    height: 642px;
   @include tablets {
     flex-direction: column;
     justify-content: space-between;
@@ -259,4 +275,17 @@ margin-top: rem(25px);
   border: 0;
   box-shadow: none;
   background: transparent;
+}
+
+
+.slider__container {
+  height: 642px;
+  
+}
+
+.products {
+  width: 940px;
+  height: 642px;
+  transition: 0.5s;
+  overflow: hidden;
 }

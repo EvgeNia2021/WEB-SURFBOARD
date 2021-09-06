@@ -1339,7 +1339,7 @@ table {
   transition: 0.4s;
   position: fixed;
   top: 0;
-  left: 0;
+  left: 100%;
   right: 0;
   bottom: 0;
   width: 100%;
@@ -1354,10 +1354,9 @@ table {
 }
 
 .showMenu {
+  left: 0;
   visibility: visible;
   opacity: 100%;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
 }
 
 .overlay-menu__list {
@@ -1406,6 +1405,17 @@ table {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: inherit;
+  height: inherit;
+  float: left;
+  /*display: none;
+  opacity: 0;*/
 }
 @media screen and (max-width: 768px) {
   .product {
@@ -1423,6 +1433,11 @@ table {
   }
 }
 
+/*.activeSlide {
+  display: block;
+opacity: 100%;
+transition: 0.5s;
+}*/
 .product__icon {
   fill: #ECECEC;
   width: 22.0555555556rem;
@@ -1464,6 +1479,7 @@ table {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  height: 642px;
 }
 @media screen and (max-width: 768px) {
   .product__container {
@@ -1704,6 +1720,18 @@ table {
   -webkit-box-shadow: none;
           box-shadow: none;
   background: transparent;
+}
+
+.slider__container {
+  height: 642px;
+}
+
+.products {
+  width: 940px;
+  height: 642px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  overflow: hidden;
 }
 
 .dropdown {
