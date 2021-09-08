@@ -1084,8 +1084,14 @@ table {
   border-color: #ffffff;
 }
 
-.map-section {
-  background: url("./img/map.svg") center center/cover no-repeat;
+/*.map-section {
+  background: url("./img/map.svg") center center / cover no-repeat;
+
+
+}
+*/
+.map {
+  height: 100vh;
 }
 
 .footer {
@@ -2079,6 +2085,11 @@ table {
           flex-direction: column;
 }
 
+.active-icon {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
 .modal {
   display: none;
 }
@@ -2117,4 +2128,182 @@ table {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.player {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  /*&.paused {
+      .player__start {
+
+
+        &:after, &:before {
+          content: "";
+          display: block;
+          width: 5px;
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          background: #fff;
+        }
+
+        &:after {
+          right: 0;
+        }
+
+        &:before {
+          left: 0;
+        }
+      }
+    }
+  */
+}
+.player.active .player__splash {
+  display: none;
+}
+
+.player__splash {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  cursor: pointer;
+}
+
+.player__controls {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 1.9444444444rem;
+  background: #404040;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 0.9444444444rem;
+  width: 100%;
+}
+
+.vol-icon {
+  width: 0.7222222222rem;
+  height: 0.8888888889rem;
+  fill: #fff;
+}
+
+.player__icon {
+  width: 0.6111111111rem;
+  height: 0.8888888889rem;
+  fill: #fff;
+}
+
+.player__volume-icon {
+  margin-right: 1.1111111111rem;
+  width: 0.7222222222rem;
+  height: 0.8888888889rem;
+}
+
+.volume-line-icon {
+  fill: #626262;
+  width: 3.2222222222rem;
+  height: 0.2222222222rem;
+}
+
+.volume-reg-icon {
+  fill: #FEDB3F;
+  width: 0.8333333333rem;
+  height: 0.8333333333rem;
+}
+
+.player__volume-level {
+  position: relative;
+}
+
+.player__volume-reg {
+  position: absolute;
+  left: 0;
+  top: 10%;
+  cursor: pointer;
+  width: 0.8333333333rem;
+  height: 0.8333333333rem;
+}
+
+.player__section-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 662px;
+}
+
+.player__section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.pb-icon {
+  fill: #626262;
+  height: 0.3888888889rem;
+  width: 24.8333333333rem;
+}
+
+.player__progressBar {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.player__progressBar-icon {
+  width: 100%;
+}
+
+.player__progressBar-reg {
+  position: absolute;
+  top: 10%;
+  left: 0;
+}
+
+.progress-icon {
+  fill: #FEDB3F;
+  width: 0.8333333333rem;
+  height: 0.8333333333rem;
+}
+
+.player__volume {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }

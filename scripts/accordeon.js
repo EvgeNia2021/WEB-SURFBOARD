@@ -3,10 +3,12 @@ const container = item.closest(".team__item");
 const content = container.find(".team__text");
 const textContent = content.find(".team__text-content");
 const reqHeight = textContent.height();
+const icon = item.find(".team__icon")
 
 
 container.addClass("active");
 content.height(reqHeight);
+icon.addClass("active-icon");
 
 };
 
@@ -21,7 +23,14 @@ itemContainer.removeClass("active");
 
 };
 
+const rotateEveryIcon = (container) => {
+const items = container.find('.team__text');
+const icons = container.find(".team__icon");
 
+icons.removeClass("active-icon");
+  
+
+};
 
 
 $('.team__title').click((e) => {
@@ -30,19 +39,23 @@ const container = $this.closest('.team__list');
 const elContainer = $this.closest(".team__item");
 
 
+
+
 if (elContainer.hasClass("active")) {
   closeEveryItem(container);
+  rotateEveryIcon(container);
  
-  $('.team-icon').show();
-  $('.team-icon__up').hide();
 }
 else {
  
   closeEveryItem(container);
+  rotateEveryIcon(container);
   openBtn($this);
-  $('.team-icon').hide();
-  $('.team-icon__up').show();
+  
 }
+
+
+
 
 });
 

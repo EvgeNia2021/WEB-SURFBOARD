@@ -1,0 +1,171 @@
+.player {
+  position: relative;
+  display: block;
+
+  width: 100%;
+  height: 100%;
+  
+
+  &.active .player__splash {
+    display: none;
+  }
+
+  /*&.paused {
+    .player__start {
+     
+
+      &:after, &:before {
+        content: "";
+        display: block;
+        width: 5px;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        background: #fff;
+      }
+
+      &:after {
+        right: 0;
+      }
+
+      &:before {
+        left: 0;
+      }
+    }
+  }
+*/
+}
+.player__splash {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  cursor: pointer;
+}
+
+.player__controls {
+position: absolute;
+right: 0;
+bottom: 0;
+left: 0;
+height: rem(35px);
+background: #404040;
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 0 rem(17px);
+width: 100%;
+}
+
+
+.vol-icon {
+  width: rem(13px);
+  height: rem(16px);
+  fill: #fff;
+
+}
+
+
+
+.player__icon {
+  width: rem(11px);
+  height: rem(16px);
+  fill: #fff;
+}
+
+.player__volume-icon {
+
+margin-right: rem(20px);
+
+width: rem(13px);
+height: rem(16px);
+}
+
+.volume-line-icon {
+  fill: #626262;
+  width: rem(58px);
+  height: rem(4px);
+ 
+
+}
+
+
+.volume-reg-icon {
+  fill: #FEDB3F;
+  width: rem(15px);
+  height: rem(15px);
+
+ 
+}
+
+
+
+.player__volume-level {
+  position: relative;
+}
+
+.player__volume-reg {
+  position: absolute;
+  left: 0; 
+  top: 10%;
+  cursor: pointer;
+  width: rem(15px);
+  height: rem(15px);
+  
+}
+
+.player__section-container {
+  display: flex;
+  
+  width: 662px;
+ 
+}
+
+.player__section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.pb-icon {
+  fill: #626262;
+  height: rem(7px);
+  width: rem(447px);
+}
+
+.player__progressBar {
+position: relative;
+      display: flex;
+      align-items: center;
+      flex: 1;
+      
+        overflow:hidden;
+        cursor:pointer;
+       }
+
+       .player__progressBar-icon {
+         width: 100%;
+       }
+
+       .player__progressBar-reg {
+         position: absolute;
+         top: 10%;
+         left:0;
+       }
+
+       .progress-icon {
+        fill: #FEDB3F;
+        width: rem(15px);
+        height: rem(15px);
+       }
+
+       
+
+
+       .player__volume {
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+       }
