@@ -49,12 +49,12 @@ position: absolute;
 right: 0;
 bottom: 0;
 left: 0;
-height: rem(35px);
+height: rem(36px);
 background: #404040;
 display: flex;
 justify-content: space-between;
 align-items: center;
-padding: 0 rem(17px);
+padding: 0 rem(10px);
 width: 100%;
 }
 
@@ -76,7 +76,7 @@ width: 100%;
 
 .player__volume-icon {
 
-margin-right: rem(20px);
+margin-right: rem(35px);
 
 width: rem(13px);
 height: rem(16px);
@@ -84,7 +84,7 @@ height: rem(16px);
 
 .volume-line-icon {
   fill: #626262;
-  width: rem(58px);
+  width: rem(62px);
   height: rem(4px);
  
 
@@ -93,8 +93,8 @@ height: rem(16px);
 
 .volume-reg-icon {
   fill: #FEDB3F;
-  width: rem(15px);
-  height: rem(15px);
+  width: rem(14px);
+  height: rem(14px);
 
  
 }
@@ -110,8 +110,8 @@ height: rem(16px);
   left: 0; 
   top: 10%;
   cursor: pointer;
-  width: rem(15px);
-  height: rem(15px);
+  width: rem(14px);
+  height: rem(14px);
   
 }
 
@@ -119,6 +119,15 @@ height: rem(16px);
   display: flex;
   margin: 0 auto;
   width: 662px;
+
+  /*@include tablets {
+    width: 594px;
+  }
+
+  @include phones {
+    width: 394px;
+  }*/
+
  
 }
 
@@ -139,10 +148,10 @@ height: rem(16px);
 position: relative;
       display: flex;
       align-items: center;
-      flex: 1;
       
+      justify-content: space-between;
         overflow:hidden;
-        cursor:pointer;
+        cursor: pointer;
        }
 
        .player__progressBar-icon {
@@ -168,4 +177,16 @@ position: relative;
          display: flex;
          justify-content: space-between;
          align-items: center;
+
+         position: relative;
+     
+      align-items: center;
+  
+      
+        overflow:hidden;
+        cursor: pointer;
+       }
+       .player__start {
+         width: rem(11px);
+         height: rem(16px);
        }
