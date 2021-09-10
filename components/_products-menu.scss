@@ -27,6 +27,8 @@ display: flex;
   background-color: rgba(0, 0, 0, 0.4);
   cursor: pointer;
 
+  
+ 
 }
 
 .products-menu__content {
@@ -56,9 +58,14 @@ display: flex;
 
 .products-menu__section-title {
 color: white;
-top: 109px;
-left: 84px;
+top: 26%;
+left: 15%;
 position: absolute;
+
+@include phones {
+  top: 12%;
+left: 3%;
+}
 }
 
 .products-menu__text {
@@ -66,4 +73,7 @@ position: absolute;
   font-weight: 700;
   font-size: rem(48px);
   transform: rotate(-90deg);
+
+  
+
 }
