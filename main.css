@@ -2188,7 +2188,7 @@ table {
   right: 0;
   bottom: 0;
   left: 0;
-  height: 1.9444444444rem;
+  height: 2rem;
   background: #404040;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2199,7 +2199,7 @@ table {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 0 0.9444444444rem;
+  padding: 0 0.5555555556rem;
   width: 100%;
 }
 
@@ -2216,21 +2216,21 @@ table {
 }
 
 .player__volume-icon {
-  margin-right: 1.1111111111rem;
+  margin-right: 1.9444444444rem;
   width: 0.7222222222rem;
   height: 0.8888888889rem;
 }
 
 .volume-line-icon {
   fill: #626262;
-  width: 3.2222222222rem;
+  width: 3.4444444444rem;
   height: 0.2222222222rem;
 }
 
 .volume-reg-icon {
   fill: #FEDB3F;
-  width: 0.8333333333rem;
-  height: 0.8333333333rem;
+  width: 0.7777777778rem;
+  height: 0.7777777778rem;
 }
 
 .player__volume-level {
@@ -2242,8 +2242,8 @@ table {
   left: 0;
   top: 10%;
   cursor: pointer;
-  width: 0.8333333333rem;
-  height: 0.8333333333rem;
+  width: 0.7777777778rem;
+  height: 0.7777777778rem;
 }
 
 .player__section-container {
@@ -2252,6 +2252,13 @@ table {
   display: flex;
   margin: 0 auto;
   width: 662px;
+  /*@include tablets {
+    width: 594px;
+  }
+
+  @include phones {
+    width: 394px;
+  }*/
 }
 
 .player__section {
@@ -2284,9 +2291,9 @@ table {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   overflow: hidden;
   cursor: pointer;
 }
@@ -2317,6 +2324,15 @@ table {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
+  align-items: center;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.player__start {
+  width: 0.6111111111rem;
+  height: 0.8888888889rem;
 }
 
 .products-menu__section {
