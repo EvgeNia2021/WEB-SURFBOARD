@@ -2216,7 +2216,7 @@ table {
 }
 
 .player__volume-icon {
-  margin-right: 1.9444444444rem;
+  margin-right: 1.3333333333rem;
   width: 0.7222222222rem;
   height: 0.8888888889rem;
 }
@@ -2235,15 +2235,35 @@ table {
 
 .player__volume-level {
   position: relative;
+  width: 3.2222222222rem;
+  height: 0.2222222222rem;
+}
+.player__volume-level::before {
+  display: block;
+  content: "";
+  height: 0.2222222222rem;
+  background: #626262;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 
 .player__volume-reg {
   position: absolute;
-  left: 0;
-  top: 10%;
-  cursor: pointer;
+  left: 2%;
+  background: #FEDB3F;
+  border-radius: 2.7777777778rem;
+  border: none;
   width: 0.7777777778rem;
   height: 0.7777777778rem;
+  padding: 0;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  cursor: pointer;
 }
 
 .player__section-container {
@@ -2285,27 +2305,43 @@ table {
 
 .player__progressBar {
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  overflow: hidden;
   cursor: pointer;
+  width: 24.7777777778rem;
+  height: 0.3333333333rem;
+}
+.player__progressBar::before {
+  display: block;
+  content: "";
+  height: 0.2222222222rem;
+  background: #626262;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 
-.player__progressBar-icon {
+/*.player__progressBar-icon {
   width: 100%;
-}
+  height: rem(7px);
+  width: rem(446px);
 
+
+}*/
 .player__progressBar-reg {
   position: absolute;
-  top: 10%;
   left: 0;
+  background: #FEDB3F;
+  border-radius: 2.7777777778rem;
+  border: none;
+  width: 0.7777777778rem;
+  height: 0.7777777778rem;
+  padding: 0;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  cursor: pointer;
 }
 
 .progress-icon {
