@@ -76,7 +76,7 @@ width: 100%;
 
 .player__volume-icon {
 
-margin-right: rem(35px);
+margin-right: rem(24px);
 
 width: rem(13px);
 height: rem(16px);
@@ -103,15 +103,38 @@ height: rem(16px);
 
 .player__volume-level {
   position: relative;
+  width: rem(58px);
+  height: rem(4px); 
+
+  &::before {
+    display: block;
+    content: "";
+   
+    height: rem(4px);
+    
+    background: #626262;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+
+  }
 }
 
 .player__volume-reg {
-  position: absolute;
-  left: 0; 
-  top: 10%;
-  cursor: pointer;
+ 
+  position: absolute;    
+  left:2%;
+  background: #FEDB3F;
+  border-radius: rem(50px);
+  border: none;
   width: rem(14px);
   height: rem(14px);
+  padding: 0;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
   
 }
 
@@ -146,22 +169,47 @@ height: rem(16px);
 
 .player__progressBar {
 position: relative;
-      display: flex;
-      align-items: center;
-      
-      justify-content: space-between;
-        overflow:hidden;
-        cursor: pointer;
+cursor: pointer;
+width: rem(446px);
+height: rem(6px);
+
+&::before {
+          display: block;
+          content: "";
+         
+          height: rem(4px);
+          
+          background: #626262;
+          position: absolute;
+          top: 50%;
+          left: 0;
+          right: 0;
+          transform: translateY(-50%);
+         }
        }
 
-       .player__progressBar-icon {
+       /*.player__progressBar-icon {
          width: 100%;
-       }
+         height: rem(7px);
+         width: rem(446px);
+
+         
+       }*/
 
        .player__progressBar-reg {
          position: absolute;
-         top: 10%;
-         left:0;
+        
+         left: 0;
+
+         background: #FEDB3F;
+         border-radius: rem(50px);
+         border: none;
+         width: rem(14px);
+         height: rem(14px);
+         padding: 0;
+         top: 50%;
+         transform: translate(-50%, -50%);
+         cursor: pointer;
        }
 
        .progress-icon {
