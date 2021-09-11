@@ -2152,19 +2152,20 @@ table {
         &:after, &:before {
           content: "";
           display: block;
-          width: 5px;
+          width: rem(5px);
+          height: rem(16px);
           position: absolute;
-          top: 0;
+          top: 11;
           bottom: 0;
           background: #fff;
         }
 
         &:after {
-          right: 0;
+          left: 15;
         }
 
         &:before {
-          left: 0;
+          left: 23;
         }
       }
     }
@@ -2176,10 +2177,8 @@ table {
 
 .player__splash {
   position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
+  top: 33%;
+  left: 44%;
   cursor: pointer;
 }
 
@@ -2228,7 +2227,7 @@ table {
 }
 
 .volume-reg-icon {
-  fill: #FEDB3F;
+  fill: #626262;
   width: 0.7777777778rem;
   height: 0.7777777778rem;
 }
@@ -2253,7 +2252,7 @@ table {
 
 .player__volume-reg {
   position: absolute;
-  left: 2%;
+  left: 0%;
   background: #FEDB3F;
   border-radius: 2.7777777778rem;
   border: none;
@@ -2298,7 +2297,7 @@ table {
 }
 
 .pb-icon {
-  fill: #626262;
+  fill: #FEDB3F;
   height: 0.3888888889rem;
   width: 24.8333333333rem;
 }
@@ -2369,6 +2368,15 @@ table {
 .player__start {
   width: 0.6111111111rem;
   height: 0.8888888889rem;
+}
+
+/*.player__pause {
+
+}*/
+.splash-icon {
+  width: 4.2222222222rem;
+  height: 6.1111111111rem;
+  fill: #fff;
 }
 
 .products-menu__section {
