@@ -54,15 +54,18 @@ const item = $this.closest(".products-menu__item");
 const itemOpened = item.hasClass("active");
 const container = $this.closest(".products-menu__list");
 
+
 if (itemOpened) {
 
   closeEveryItemInContainer(container)
-
+ 
 } else {
 
   closeEveryItemInContainer(container)
-  openItem(item);
+  openItem(item)
+
 }
+
 
 
 });

@@ -1,0 +1,19 @@
+{
+  "name": "surfboard",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "gulp": "gulp"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^4.0.2"
+  },
+  "dependencies": {
+    "jquery-touchswipe": "^1.6.19",
+    "mobile-detect": "^1.4.5"
+  }
+}
