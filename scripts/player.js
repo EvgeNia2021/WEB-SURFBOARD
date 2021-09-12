@@ -1,6 +1,10 @@
 let player;
 const playerContainer = $('.player');
+//let soundControl;
+
+
  
+
 
 let eventsInit = () => {
   $('.player__start').click(e => {
@@ -8,13 +12,35 @@ let eventsInit = () => {
   
 
     if (playerContainer.hasClass("paused")) {
-     
+      
+      $('#pause').hide();
+$('#play').show();
+$('#player-bg').show();
       player.pauseVideo();
     } else {
- 
+      $('#play').hide();
+$('#pause').show();
+$('#player-bg').hide();
       player.playVideo();
     }
   });
+
+ // document.addEventListener('DOMContentLoaded', e => {
+  //  video = document.getElementById('player');
+////soundControl = document.getElementById('volumeLevel');
+//soundControl.addEventListener('click', changeSoundVolume);
+//soundControl.addEventListener('mouseup', changeSoundVolume);
+
+//soundControl.min = 0;
+//soundControl.max = 10;
+
+//soundControl.value = soundControl.min;
+
+//function changeSoundVolume() {
+//  video.volume = soundControl.value/10;
+//}
+//});
+
 
   
   $(".player__progressBar").click(e => {
@@ -34,6 +60,8 @@ let eventsInit = () => {
 
    $(".player__splash").click(e => {
     player.playVideo();
+    $('#player-bg').hide();
+
   })
  };
 
@@ -41,11 +69,6 @@ let eventsInit = () => {
   let interval;
   const durationSec = player.getDuration();
   
-  $(".player__duration-estimate").text(formatTime(durationSec));
-  
-  if (typeof interval !== "undefined") {
-    clearInterval(interval);
-  }
   
   interval = setInterval(() => {
     const completedSec = player.getCurrentTime();
@@ -55,7 +78,7 @@ let eventsInit = () => {
       left: `${completedPercent}%`
     });
   
-    $(".player__duration-completed").text(formatTime(completedSec));
+    
   }, 1000);
  };
  
@@ -88,8 +111,8 @@ let eventsInit = () => {
 function onYouTubeIframeAPIReady() {
  player = new YT.Player("yt-player", {
    height: "392",
-   width: "662",
-   videoId: "G1IbRujko-A",
+   width: "100%",
+   videoId: "BBGEG21CGo0",
    events: {
    onReady: onPlayerReady,
    onStateChange: onPlayerStateChange
@@ -104,5 +127,6 @@ function onYouTubeIframeAPIReady() {
   }
  });
 }
+
 
 eventsInit();

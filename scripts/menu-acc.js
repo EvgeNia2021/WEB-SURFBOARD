@@ -17,7 +17,7 @@ const isMobile = window.matchMedia("(max-width: 768px)").matches;
 if (isMobile) {
   reqItemWidth = screenWidth - titleWidth;
 } else {
-  reqItemWidth = 524;
+  reqItemWidth = 463;
 }
 
 return {

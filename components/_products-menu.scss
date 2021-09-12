@@ -62,9 +62,14 @@ top: 26%;
 left: 15%;
 position: absolute;
 
+@include tablets {
+  top: 13%;
+  left: 5%;
+}
+
 @include phones {
-  top: 12%;
-left: 3%;
+  top: 10%;
+left: 2%;
 }
 }
 
@@ -74,6 +79,15 @@ left: 3%;
   font-size: rem(48px);
   transform: rotate(-90deg);
 
+@include tablets {
+  transform: rotate(
+    -90deg) translate(-245px);
+}
+
+@include phones {
+  transform: rotate(
+    -90deg) translate(-177px);
+}
   
 
 }

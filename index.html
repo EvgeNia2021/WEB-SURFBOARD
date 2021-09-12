@@ -165,7 +165,7 @@
       </section>
       <section data-section-id="products-slider" class="section products__section">
         <div class="container">
-          <a href="" class="products-slider__arrow products-slider__arrow--prev" id="left"><svg class="arrow-icon">
+          <a href="#" class="products-slider__arrow products-slider__arrow--prev" id="left"><svg class="arrow-icon">
             <use xlink:href="./sprite.svg#prev"></use>
           </svg></a>
           <div class="products-slider">
@@ -386,10 +386,11 @@
                 </div>
               </li>
             </ul>
-            <a href="" class="products-slider__arrow products-slider__arrow--next" id="right"><svg class="arrow-icon">
-                <use xlink:href="./sprite.svg#next"></use>
-              </svg></a>
+            
           </div>
+          <a href="#" class="products-slider__arrow products-slider__arrow--next" id="right"><svg class="arrow-icon">
+            <use xlink:href="./sprite.svg#next"></use>
+          </svg></a>
         </div>
 
       </section>
@@ -702,6 +703,9 @@
   <h2 class="section__title">Как мы работаем</h2>
   <div class="player__section-container">
     <div class="player">
+      <div class="player__background" id="player-bg">
+        <img src="./img/splash.png" alt="">
+      </div>
       <div class="player__wrapper">
         <div class="player__element" id="yt-player"></div>
         <div class="player__splash">
@@ -711,10 +715,12 @@
         </div>
       </div>
       <div class="player__controls">
-        <button class="player__start">
-          <svg class="player__icon">
+        <button class="player__start" >
+          <svg class="player__icon" id="play">
             <use xlink:href="./sprite.svg#play"></use>
           </svg>
+          <svg class="pause-icon" id="pause">
+            <use xlink:href="./sprite.svg#pause"></use></svg>
         </button>
         <div class="player__progressBar">
           
@@ -727,6 +733,7 @@
             <use xlink:href="./sprite.svg#volume"></use>
           </svg></div>
           <div class="player__volume-level">
+            
             <div class="player__volume-reg">
             </div>
           </div>
@@ -863,7 +870,7 @@
     </div>
 
   </div>
-  <nav class="fixed-menu">
+  <nav class="fixed-menu fixed-menu--dark">
     <ul class="fixed-menu__list">
       <li class="fixed-menu__item fixed-menu__item--active">
         <a href="#" data-scroll-to="hero" class="fixed-menu__link"></a>
@@ -932,6 +939,7 @@
 
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script type="text/javascript" src="js/jquery.touchSwipe.min.js"></script>
   <script src="./scripts/menu.js"></script>
   <script src="./scripts/reviews.js"></script>
   <script src="./scripts/accordeon.js"></script>
