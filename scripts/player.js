@@ -54,6 +54,11 @@ $('#player-bg').hide();
     $(".player__progressBar-reg").css({
       left: `${newButtonPositionPercent}%`
     });
+
+    $(".player__progressBar").css({
+      left: `${newButtonPositionPercent}%`
+    });
+
     
     player.seekTo(newPlaybackPositionSec);
    });
@@ -64,6 +69,38 @@ $('#player-bg').hide();
 
   })
  };
+
+
+ $(".player__volume-level").click(e => {
+  const volumeBar = $(e.currentTarget);
+  const clickedPositionOnVolumeBar = e.originalEvent.layerX;
+  const newRegPositionPercent = (clickedPositionOnVolumeBar / volumeBar.width()) * 100;
+ 
+   $(".player__volume-reg").css({
+    left: `${newRegPositionPercent}%`
+  });
+  
+  
+  player.setVolume(newRegPositionPercent);
+ });
+
+ $(".player__volume-icon").click(e => {
+  e.preventDefault();
+  
+
+    if (player.isMuted()) {
+      
+      player.unMute();
+    } else {
+      player.mute();
+    }
+
+ });
+
+ 
+
+
+
 
  const onPlayerReady = () => {
   let interval;
@@ -112,7 +149,7 @@ function onYouTubeIframeAPIReady() {
  player = new YT.Player("yt-player", {
    height: "392",
    width: "100%",
-   videoId: "BBGEG21CGo0",
+   videoId: "W86cTIoMv2U",
    events: {
    onReady: onPlayerReady,
    onStateChange: onPlayerStateChange
