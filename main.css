@@ -299,7 +299,7 @@ table {
 }
 @media screen and (max-width: 768px) {
   .hero__header {
-    padding: 0 2%;
+    padding: 0 4%;
   }
 }
 @media screen and (max-width: 480px) {
@@ -1411,6 +1411,10 @@ table {
   fill: #FFFFFF;
   width: 20px;
   height: 20px;
+}
+
+.overlay__icon--black {
+  fill: #313131;
 }
 
 .products-section {

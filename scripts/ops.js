@@ -1,6 +1,11 @@
 const sections = $("section");
 const display = $(".wrapper__content");
 
+
+
+const mobileDetect = new MobileDetect(window.navigator.userAgent);
+const isMobile = mobileDetect.mobile();
+
 let inScroll = false;
 
 sections.first().addClass("active");
@@ -10,13 +15,32 @@ const performTransition = sectionEq => {
     inScroll = true;
     const position = sectionEq * -100;
 
+    const currentSection = sections.eq(sectionEq);
+    const hamMenuTheme = currentSection.attr("data-hammenu-theme");
+    const hamMenuIcon = $(".overlay__icon");
+    const sideMenu = $(".fixed-menu")
+
+    if (hamMenuTheme === "black") {
+      hamMenuIcon.addClass("overlay__icon--black");
+
+    } else {
+      hamMenuIcon.removeClass("overlay__icon--black");
+    }
+
+
     display.css({
       transform: `translateY(${position}%)`,
     });
+
+
   
   sections.eq(sectionEq).addClass("active").siblings().removeClass("active");
+  
+  
   setTimeout(() => {
     inScroll = false;
+    sideMenu.find(".fixed-menu__item").eq(sectionEq).addClass("fixed-menu__item--active").siblings().removeClass("fixed-menu__item--active");
+
   }, 1300);
 
 }
@@ -63,6 +87,8 @@ if (tagName !== "input" && tagName !== "textarea") {
   }
 });
 
+$(".wrapper").on("touchmove", e => e.preventDefault());
+
 $("[data-scroll-to]").click( e => {
   e.preventDefault();
 
@@ -72,3 +98,20 @@ $("[data-scroll-to]").click( e => {
 
   performTransition(reqSection.index());
 });
+
+if (isMobile){
+  $("body").swipe({
+  
+    swipe: function (event, direction) {
+      const scroller = viewportScroller();
+      let scrollDirection = "";
+  
+      if (direction === "up") scrollDirection = "next";
+      if (direction === "down") scrollDirection = "prev";
+  
+      scroller[scrollDirection]();
+    },
+  });
+  
+  
+}
