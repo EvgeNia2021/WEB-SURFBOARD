@@ -99,7 +99,7 @@ $("[data-scroll-to]").click( e => {
   performTransition(reqSection.index());
 });
 
-if (isMobile){
+if (isMobile) {
   $("body").swipe({
   
     swipe: function (event, direction) {
