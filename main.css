@@ -797,6 +797,7 @@ table {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  border-radius: 50%;
 }
 
 .form {
@@ -1432,6 +1433,21 @@ table {
       -ms-flex-pack: center;
           justify-content: center;
 }
+@media screen and (max-width: 883px) {
+  .product {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
 @media screen and (max-width: 768px) {
   .product {
     display: -webkit-box;
@@ -1453,6 +1469,12 @@ table {
   width: 22.0555555556rem;
   height: 21.0555555556rem;
 }
+@media screen and (max-width: 883px) {
+  .product__icon {
+    width: 17rem;
+    height: 16.2222222222rem;
+  }
+}
 @media screen and (max-width: 768px) {
   .product__icon {
     width: 17rem;
@@ -1467,6 +1489,11 @@ table {
 
 .product__imageBlock {
   margin-right: 8%;
+}
+@media screen and (max-width: 883px) {
+  .product__imageBlock {
+    margin-bottom: 2.2222222222rem;
+  }
 }
 @media screen and (max-width: 768px) {
   .product__imageBlock {
@@ -1490,6 +1517,21 @@ table {
   display: -ms-flexbox;
   display: flex;
 }
+@media screen and (max-width: 883px) {
+  .product__container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+  }
+}
 @media screen and (max-width: 768px) {
   .product__container {
     -webkit-box-orient: vertical;
@@ -1510,6 +1552,13 @@ table {
   position: absolute;
   top: -3%;
   left: 6%;
+}
+@media screen and (max-width: 883px) {
+  .product__imageBlock-front {
+    width: 17.7777777778rem;
+    top: -3%;
+    left: 29%;
+  }
 }
 @media screen and (max-width: 768px) {
   .product__imageBlock-front {
@@ -1553,6 +1602,11 @@ table {
 .product__subtitle {
   margin-bottom: 0.9444444444rem;
 }
+@media screen and (max-width: 883px) {
+  .product__subtitle {
+    margin-bottom: 0.2777777778rem;
+  }
+}
 @media screen and (max-width: 768px) {
   .product__subtitle {
     margin-bottom: 0.2777777778rem;
@@ -1566,6 +1620,11 @@ table {
 
 .product__desc-txt {
   margin-bottom: 0.6666666667rem;
+}
+@media screen and (max-width: 883px) {
+  .product__desc-txt {
+    margin-bottom: 1rem;
+  }
 }
 @media screen and (max-width: 768px) {
   .product__desc-txt {
@@ -1583,6 +1642,16 @@ table {
   display: -ms-flexbox;
   display: flex;
 }
+@media screen and (max-width: 883px) {
+  .product__price {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
 @media screen and (max-width: 768px) {
   .product__price {
     display: -webkit-box;
@@ -1599,6 +1668,17 @@ table {
   display: -ms-flexbox;
   display: flex;
   margin-bottom: 0.5555555556rem;
+}
+@media screen and (max-width: 883px) {
+  .product__properties {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-bottom: 0.9444444444rem;
+  }
 }
 @media screen and (max-width: 768px) {
   .product__properties {
@@ -1633,6 +1713,11 @@ table {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+@media screen and (max-width: 883px) {
+  .product__price-tag {
+    margin-right: 2.5rem;
+  }
 }
 @media screen and (max-width: 768px) {
   .product__price-tag {
@@ -1698,6 +1783,12 @@ table {
 
 .product__desc {
   width: 80%;
+}
+@media screen and (max-width: 883px) {
+  .product__desc {
+    width: 100%;
+    padding: 0 111px;
+  }
 }
 @media screen and (max-width: 768px) {
   .product__desc {
@@ -1783,7 +1874,17 @@ table {
   margin-bottom: 2.5rem;
   cursor: pointer;
 }
+@media screen and (max-width: 883px) {
+  .product__dropdown {
+    display: none;
+  }
+}
 @media screen and (max-width: 768px) {
+  .product__dropdown {
+    display: none;
+  }
+}
+@media screen and (max-width: 480px) {
   .product__dropdown {
     display: none;
   }
@@ -2182,8 +2283,19 @@ table {
 }
 
 .player__start {
-  width: 0.6111111111rem;
-  height: 0.8888888889rem;
+  margin-right: 1.6111111111rem;
+  -webkit-transform: translateY(8%);
+          transform: translateY(8%);
+}
+@media screen and (max-width: 768px) {
+  .player__start {
+    margin-right: 1.3333333333rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .player__start {
+    margin-right: 0.8888888889rem;
+  }
 }
 
 /*.player__pause {
@@ -2239,8 +2351,18 @@ table {
 
 .player__volume-icon {
   margin-right: 1.3333333333rem;
-  width: 0.7222222222rem;
-  height: 0.8888888889rem;
+  -webkit-transform: translateY(8%);
+          transform: translateY(8%);
+}
+@media screen and (max-width: 768px) {
+  .player__volume-icon {
+    margin-right: 1.1111111111rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .player__volume-icon {
+    margin-right: 0.7222222222rem;
+  }
 }
 
 .volume-line-icon {
@@ -2316,17 +2438,25 @@ width: rem(14px);
   display: flex;
   margin: 0 auto;
   max-width: 662px;
-  height: 392px;
-  /*@include tablets {
-      max-width: 594px;
-      height: 351px;
-    }
-
-    @include phones {
-      max-width: 394px;
-      height: 233px;
-    }
-  */
+  /*height: 392px;*/
+}
+@media screen and (max-width: 768px) {
+  .player__section-container {
+    max-width: 594px;
+    height: 351px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .player__section-container {
+    max-width: 394px;
+    height: 233px;
+  }
+}
+@media screen and (max-width: 440px) {
+  .player__section-container {
+    max-width: 344px;
+    height: 183px;
+  }
 }
 
 .player__section {
@@ -2356,6 +2486,17 @@ width: rem(14px);
   cursor: pointer;
   width: 24.7777777778rem;
   height: 0.3333333333rem;
+  margin-right: 2.3333333333rem;
+}
+@media screen and (max-width: 768px) {
+  .player__progressBar {
+    margin-right: 2.1111111111rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .player__progressBar {
+    margin-right: 1.3888888889rem;
+  }
 }
 .player__progressBar::before {
   display: block;

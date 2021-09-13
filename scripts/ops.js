@@ -1,6 +1,6 @@
 const sections = $("section");
 const display = $(".wrapper__content");
-
+const sideMenu = $(".fixed-menu")
 
 
 const mobileDetect = new MobileDetect(window.navigator.userAgent);
@@ -10,15 +10,19 @@ let inScroll = false;
 
 sections.first().addClass("active");
 
+const countSectionPosition = sectionEq => {
+  return sectionEq * -100;
+}
+
 const performTransition = sectionEq => {
   if (inScroll === false) {
     inScroll = true;
-    const position = sectionEq * -100;
+    const position = countSectionPosition(sectionEq);
 
     const currentSection = sections.eq(sectionEq);
     const hamMenuTheme = currentSection.attr("data-hammenu-theme");
     const hamMenuIcon = $(".overlay__icon");
-    const sideMenu = $(".fixed-menu")
+    
 
     if (hamMenuTheme === "black") {
       hamMenuIcon.addClass("overlay__icon--black");
@@ -103,13 +107,13 @@ if (isMobile) {
   $("body").swipe({
   
     swipe: function (event, direction) {
-      const scroller = viewportScroller();
+     e.preventDefault();
       let scrollDirection = "";
   
       if (direction === "up") scrollDirection = "next";
       if (direction === "down") scrollDirection = "prev";
   
-      scroller[scrollDirection]();
+     
     },
   });
   

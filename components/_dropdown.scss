@@ -45,7 +45,14 @@ transition: opacity 0.5s;
     margin-bottom: rem(45px);
     cursor: pointer;
 
+    @include spaceforbutton {
+      display: none;
+    }
+
     @include tablets {
+      display: none;
+    }
+    @include phones {
       display: none;
     }
 }

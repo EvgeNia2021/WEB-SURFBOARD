@@ -8,6 +8,12 @@
   justify-content: center;
   
 
+  @include spaceforbutton {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
 
   @include tablets {
     display: flex;
@@ -22,6 +28,12 @@
   fill: #ECECEC;
   width: rem(397px);
   height: rem(379px);
+
+  @include spaceforbutton {
+    width: rem(306px);
+  height: rem(292px);
+
+  }
 
   @include tablets {
     width: rem(306px);
@@ -39,6 +51,9 @@
   margin-right: 8%;
 
 
+  @include spaceforbutton {
+    margin-bottom: rem(40px);
+      }
   @include tablets {
 margin-bottom: rem(40px);
   }
@@ -57,6 +72,13 @@ margin-bottom: rem(40px);
 .product__container {
   display: flex;
 
+  @include spaceforbutton {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+  }
+
   @include tablets {
     flex-direction: column;
     justify-content: space-between;
@@ -70,6 +92,12 @@ position: absolute;
 top: -3%;
 left: 6%;
 
+
+@include spaceforbutton {
+  width: rem(320px);
+    top: -3%;
+    left: 29%;
+}
 @include tablets {
   width: rem(320px);
     top: -3%;
@@ -112,6 +140,11 @@ text-transform: uppercase;
 .product__subtitle {
   margin-bottom: rem(17px);
 
+  @include spaceforbutton {
+    margin-bottom: rem(5px);
+  }
+
+
   @include tablets {
     margin-bottom: rem(5px);
   }
@@ -123,6 +156,11 @@ text-transform: uppercase;
 
 .product__desc-txt {
   margin-bottom: rem(12px);
+
+  @include spaceforbutton {
+    margin-bottom: rem(18px);
+  }
+
 
   @include tablets {
     margin-bottom: rem(18px);
@@ -136,6 +174,11 @@ text-transform: uppercase;
 
 .product__price {
   display: flex;
+
+  @include spaceforbutton {
+    display: flex;
+  justify-content: center;
+  }
   @include tablets {
     display: flex;
   justify-content: center;
@@ -150,6 +193,12 @@ text-transform: uppercase;
   margin-bottom: rem(10px);
 
   
+
+  @include spaceforbutton {
+    display: flex;
+  justify-content: center;
+  margin-bottom: rem(17px);
+  }
   @include tablets {
     display: flex;
   justify-content: center;
@@ -177,6 +226,10 @@ margin-top: rem(25px);
   color: $black;
   margin-right: 17%;
   display: flex;
+
+  @include spaceforbutton {
+    margin-right: rem(45px);
+  }
 
   @include tablets {
     margin-right: rem(45px);
@@ -237,6 +290,12 @@ margin-top: rem(25px);
 .product__desc {
   width: 80%;
 
+
+  @include spaceforbutton {
+    width: 100%;
+    padding: 0 111px;
+  
+      }
   @include tablets {
     width: 100%;
     padding: 0 111px;

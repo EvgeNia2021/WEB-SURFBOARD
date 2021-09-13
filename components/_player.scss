@@ -44,8 +44,16 @@
 }
 
 .player__start {
-  width: rem(11px);
-     height: rem(16px);
+ margin-right: rem(29px);
+  
+     transform: translateY(8%);
+
+
+     @include tablets {
+     margin-right: rem(24px);}
+
+     @include phones {
+      margin-right: rem(16px);}
     }
 
     /*.player__pause {
@@ -104,9 +112,14 @@ width: 100%;
 .player__volume-icon {
 
 margin-right: rem(24px);
+transform: translateY(8%);
 
-width: rem(13px);
-height: rem(16px);
+@include tablets {
+  margin-right: rem(20px);
+}
+@include phones {
+  margin-right: rem(13px);
+}
 }
 
 .volume-line-icon {
@@ -193,11 +206,11 @@ width: rem(14px);
   display: flex;
   margin: 0 auto;
   max-width: 662px;
-  height: 392px;
+  /*height: 392px;*/
 
   
 
-  /*@include tablets {
+  @include tablets {
     max-width: 594px;
     height: 351px;
   }
@@ -206,7 +219,12 @@ width: rem(14px);
     max-width: 394px;
     height: 233px;
   }
-*/
+
+  @include phones440 {
+    max-width: 344px;
+    height: 183px;
+  }
+
  
 }
 
@@ -228,6 +246,15 @@ position: relative;
 cursor: pointer;
 width: rem(446px);
 height: rem(6px);
+margin-right: rem(42px);
+
+@include tablets {
+  margin-right: rem(38px);
+}
+
+@include tablets {
+  margin-right: rem(25px);
+}
 
 &::before {
           display: block;
@@ -306,3 +333,5 @@ height: rem(6px);
          left: 0;
       
        }
+
+     

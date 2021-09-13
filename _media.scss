@@ -2,6 +2,12 @@
   @return $px / $baseFontSize + 0rem;
 }
 
+@mixin spaceforbutton {
+  @media screen and (max-width: $spaceforbutton) {
+    @content;
+  }
+}
+
 @mixin tablets {
   @media screen and (max-width: $tablets) {
     @content;
