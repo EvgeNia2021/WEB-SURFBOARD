@@ -107,11 +107,13 @@ if (isMobile) {
   $("body").swipe({
   
     swipe: function (event, direction) {
-     e.preventDefault();
+     event.preventDefault();
       let scrollDirection = "";
   
-      if (direction === "up") scrollDirection = "next";
-      if (direction === "down") scrollDirection = "prev";
+      if (direction === "up") { scrollDirection = "next"; 
+    }
+      if (direction === "down") { scrollDirection = "prev";
+    }
   
      
     },
