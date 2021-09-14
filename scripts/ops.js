@@ -108,7 +108,7 @@ if (isMobile) {
   
     swipe: function (event, direction) {
      event.preventDefault();
-      let scrollDirection = "";
+      //let scrollDirection = "";
   
       if (direction === "up") { scrollViewport("next"); 
     }
