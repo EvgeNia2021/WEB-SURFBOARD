@@ -110,9 +110,9 @@ if (isMobile) {
      event.preventDefault();
       let scrollDirection = "";
   
-      if (direction === "up") { scrollDirection = "next"; 
+      if (direction === "up") { scrollDirection("next"); 
     }
-      if (direction === "down") { scrollDirection = "prev";
+      if (direction === "down") { scrollDirection("prev");
     }
   
      
