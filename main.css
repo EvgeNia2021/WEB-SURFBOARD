@@ -2676,13 +2676,19 @@ width: rem(14px);
 }
 @media screen and (max-width: 768px) {
   .products-menu__text {
-    -webkit-transform: rotate(-90deg) translate(-245px);
-            transform: rotate(-90deg) translate(-245px);
+    -webkit-transform: rotate(-90deg);
+            transform: rotate(-90deg);
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+    margin-bottom: 9.4444444444rem;
   }
 }
 @media screen and (max-width: 480px) {
   .products-menu__text {
-    -webkit-transform: rotate(-90deg) translate(-177px);
-            transform: rotate(-90deg) translate(-177px);
+    -webkit-transform: rotate(-90deg);
+            transform: rotate(-90deg);
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+    margin-bottom: 9.4444444444rem;
   }
 }
