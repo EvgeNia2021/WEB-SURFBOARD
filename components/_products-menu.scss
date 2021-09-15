@@ -77,16 +77,21 @@ left: 2%;
   white-space: nowrap;
   font-weight: 700;
   font-size: rem(48px);
+  
   transform: rotate(-90deg);
 
 @include tablets {
   transform: rotate(
-    -90deg) translate(-245px);
+    -90deg) ;
+    align-self: flex-end;
+  margin-bottom: rem(170px);
 }
 
 @include phones {
   transform: rotate(
-    -90deg) translate(-177px);
+    -90deg) ;
+    align-self: flex-end;
+  margin-bottom: rem(170px);
 }
   
 
