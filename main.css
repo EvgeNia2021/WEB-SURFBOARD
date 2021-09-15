@@ -260,7 +260,7 @@ table {
 .hero {
   background: url("./img/hero2.jpg") center center/cover no-repeat;
   background-color: #1968B1;
-  height: 100vh;
+  height: 100%;
   color: #fff;
 }
 
@@ -426,7 +426,7 @@ table {
 }
 
 .section {
-  height: 100vh;
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1091,8 +1091,12 @@ table {
   border-color: #ffffff;
 }
 
-.fixed-menu--dark {
-  color: #292929;
+.fixed-menu--dark .fixed-menu__item--active .fixed-menu__link {
+  border-color: #292929;
+}
+
+.fixed-menu--dark .fixed-menu__link:before {
+  background: #292929;
 }
 
 /*.map-section {
@@ -2567,6 +2571,15 @@ width: rem(14px);
   position: absolute;
   top: 0;
   left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.player__background-img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 100%;
+  width: 100%;
 }
 
 .products-menu__section {

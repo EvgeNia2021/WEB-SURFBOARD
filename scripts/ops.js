@@ -20,15 +20,24 @@ const performTransition = sectionEq => {
     const position = countSectionPosition(sectionEq);
 
     const currentSection = sections.eq(sectionEq);
+    const sideMenuTheme = currentSection.attr("data-sidemenu-theme")
     const hamMenuTheme = currentSection.attr("data-hammenu-theme");
     const hamMenuIcon = $(".overlay__icon");
+    const sideMenu = $(".fixed-menu")
     
 
     if (hamMenuTheme === "black") {
       hamMenuIcon.addClass("overlay__icon--black");
+      
 
     } else {
       hamMenuIcon.removeClass("overlay__icon--black");
+    }
+
+    if (sideMenuTheme === "black") {
+      sideMenu.addClass("fixed-menu--dark");
+    } else {
+      sideMenu.removeClass("fixed-menu--dark");
     }
 
 

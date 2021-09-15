@@ -48,7 +48,14 @@
   }
 }
 
-
 .fixed-menu--dark {
-  color: #292929;
+  .fixed-menu__item--active {
+    .fixed-menu__link {
+      border-color: $black;
+    }
+  }
+}
+
+.fixed-menu--dark .fixed-menu__link:before {
+  background: $black
 }

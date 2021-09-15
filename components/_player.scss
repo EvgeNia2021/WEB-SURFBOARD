@@ -331,7 +331,13 @@ margin-right: rem(42px);
          position: absolute;
          top: 0;
          left: 0;
+         bottom: 0;
+         right: 0;
       
        }
 
-     
+     .player__background-img {
+       object-fit: cover;
+       height: 100%;
+       width: 100%;
+     }
