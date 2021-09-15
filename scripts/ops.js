@@ -12,33 +12,50 @@ sections.first().addClass("active");
 
 const countSectionPosition = sectionEq => {
   return sectionEq * -100;
+
+  if (isNaN(position)) {
+    console.error("передано не верное значение в countSectionPosition");
+    return 0;
+  }
+
+  return position;
+};
+
+
+const changeMenuThemeForSection = sectionEq => {
+  const currentSection = sections.eq(sectionEq);
+  const sideMenuTheme = currentSection.attr("data-sidemenu-theme")
+  const hamMenuTheme = currentSection.attr("data-hammenu-theme");
+  const hamMenuIcon = $(".overlay__icon");
+  
+
+  
+
+  if (hamMenuTheme === "black") {
+    hamMenuIcon.addClass("overlay__icon--black");
+
+  } else {
+    hamMenuIcon.removeClass("overlay__icon--black");
+  }
+
+  if (sideMenuTheme === "black") {
+    sideMenu.addClass("fixed-menu--dark");
+  } else {
+    sideMenu.removeClass("fixed-menu--dark");
+  }
 }
 
 const performTransition = sectionEq => {
-  if (inScroll === false) {
+  if (inScroll) return;
+
+  const transitionOver = 1000;
+  const mouseInertiaOver = 300;
+
     inScroll = true;
+
     const position = countSectionPosition(sectionEq);
 
-    const currentSection = sections.eq(sectionEq);
-    const sideMenuTheme = currentSection.attr("data-sidemenu-theme")
-    const hamMenuTheme = currentSection.attr("data-hammenu-theme");
-    const hamMenuIcon = $(".overlay__icon");
-    const sideMenu = $(".fixed-menu")
-    
-
-    if (hamMenuTheme === "black") {
-      hamMenuIcon.addClass("overlay__icon--black");
-      
-
-    } else {
-      hamMenuIcon.removeClass("overlay__icon--black");
-    }
-
-    if (sideMenuTheme === "black") {
-      sideMenu.addClass("fixed-menu--dark");
-    } else {
-      sideMenu.removeClass("fixed-menu--dark");
-    }
+    changeMenuThemeForSection(sectionEq);
 
 
     display.css({
@@ -54,50 +71,63 @@ const performTransition = sectionEq => {
     inScroll = false;
     sideMenu.find(".fixed-menu__item").eq(sectionEq).addClass("fixed-menu__item--active").siblings().removeClass("fixed-menu__item--active");
 
-  }, 1300);
+  }, transitionOver + mouseInertiaOver);
 
-}
   
 };
 
-const  scrollViewport = direction => {
+const  ViewportScroller = () => {
 const activeSection = sections.filter(".active");
 const nextSection = activeSection.next();
 const prevSection = activeSection.prev();
 
-if (direction === "next" && nextSection.length) {
-performTransition(nextSection.index())
+
+return {
+  next() {
+    if (nextSection.length) {
+      performTransition(nextSection.index());
+  }
+},
+
+prev() {
+  if (prevSection.length) {
+  performTransition(prevSection.index());
 }
-if (direction === "prev" && prevSection.length) {
-  performTransition(prevSection.index())
-}
-}
+
+},
+};
+};
 
 $(window).on("wheel", e => {
   const deltaY = e.originalEvent.deltaY;
+const scroller = ViewportScroller();
 
   if (deltaY > 0) {
-scrollViewport("next");
+scroller.next();
   }
 
   if (deltaY < 0 ) {
-    scrollViewport("prev");
+    scroller.prev();
   }
 });
 
 $(window).on("keydown", e => {
 const tagName = e.target.tagName.toLowerCase();
-if (tagName !== "input" && tagName !== "textarea") {
+const TypingInInputs = tagName == "input" || tagName == "textarea";
+const scroller = ViewportScroller();
+
+if (TypingInInputs) return;
+
   switch (e.keyCode) {
     case 38: 
-    scrollViewport("prev");
+    scroller.prev();
     break;
 
     case 40: 
-    scrollViewport("next");
+    scroller.next();
     break;
 }
-  }
+  
 });
 
 $(".wrapper").on("touchmove", e => e.preventDefault());
@@ -117,16 +147,16 @@ if (isMobile) {
   
     swipe: function (event, direction) {
      event.preventDefault();
-      //let scrollDirection = "";
+     const scroller = ViewportScroller();
+      let scrollDirection = "";
   
-      if (direction === "up") { scrollViewport("next"); 
-    }
-      if (direction === "down") { scrollViewport("prev");
-    }
-  
-     
+      if (direction === "up") scrollDirection = "next"; 
+    
+      if (direction === "down") scrollDirection = "prev"; 
+
+      scroller[scrollDirection]();
     },
+  
   });
-  
-  
+    
 }
