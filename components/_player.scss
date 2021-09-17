@@ -188,7 +188,7 @@ width: rem(14px);
 .player__volume-reg {
  
   position: absolute;    
-  left:0%;
+  left: 40%;
   background: 
   #FEDB3F;
   border-radius: rem(50px);
@@ -312,7 +312,7 @@ margin-right: rem(42px);
 
          position: relative;
      
-        overflow:hidden;
+       
         cursor: pointer;
        }
        
@@ -340,4 +340,30 @@ margin-right: rem(42px);
        object-fit: cover;
        height: 100%;
        width: 100%;
+     }
+
+     .player__progressBar-color {
+       display: inline-block;
+       width: 0;
+       height: rem(4px);
+          
+      background: #FEDB3F;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      right: 0;
+      transform: translateY(-50%);
+     }
+
+     .player__volume-color {
+      display: inline-block;
+      width: 40%;
+      height: rem(4px);
+         
+     background: #FEDB3F;
+     position: absolute;
+     top: 50%;
+     left: 0;
+     right: 0;
+     transform: translateY(-50%);
      }
