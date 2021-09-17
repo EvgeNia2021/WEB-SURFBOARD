@@ -1,6 +1,6 @@
 let player;
 const playerContainer = $('.player');
-//let soundControl;
+
 
 
  
@@ -25,21 +25,6 @@ $('#player-bg').hide();
     }
   });
 
- // document.addEventListener('DOMContentLoaded', e => {
-  //  video = document.getElementById('player');
-////soundControl = document.getElementById('volumeLevel');
-//soundControl.addEventListener('click', changeSoundVolume);
-//soundControl.addEventListener('mouseup', changeSoundVolume);
-
-//soundControl.min = 0;
-//soundControl.max = 10;
-
-//soundControl.value = soundControl.min;
-
-//function changeSoundVolume() {
-//  video.volume = soundControl.value/10;
-//}
-//});
 
 
   
@@ -55,8 +40,8 @@ $('#player-bg').hide();
       left: `${newButtonPositionPercent}%`
     });
 
-    $(".player__progressBar").css({
-      left: `${newButtonPositionPercent}%`
+    $(".player__progressBar-color").css({
+      width: `${newButtonPositionPercent}%`
     });
 
     
@@ -75,9 +60,14 @@ $('#player-bg').hide();
   const volumeBar = $(e.currentTarget);
   const clickedPositionOnVolumeBar = e.originalEvent.layerX;
   const newRegPositionPercent = (clickedPositionOnVolumeBar / volumeBar.width()) * 100;
+  
  
    $(".player__volume-reg").css({
     left: `${newRegPositionPercent}%`
+  });
+
+  $(".player__volume-color").css({
+    width: `${newRegPositionPercent}%`
   });
   
   
@@ -113,6 +103,10 @@ $('#player-bg').hide();
   
     $(".player__progressBar-reg").css({
       left: `${completedPercent}%`
+    });
+
+    $(".player__progressBar-color").css({
+      width: `${completedPercent}%`
     });
   
     

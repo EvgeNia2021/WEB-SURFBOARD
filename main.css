@@ -2423,7 +2423,7 @@ width: rem(14px);
 */
 .player__volume-reg {
   position: absolute;
-  left: 0%;
+  left: 40%;
   background: #FEDB3F;
   border-radius: 2.7777777778rem;
   border: none;
@@ -2554,7 +2554,6 @@ width: rem(14px);
       -ms-flex-align: center;
           align-items: center;
   position: relative;
-  overflow: hidden;
   cursor: pointer;
 }
 
@@ -2580,6 +2579,32 @@ width: rem(14px);
      object-fit: cover;
   height: 100%;
   width: 100%;
+}
+
+.player__progressBar-color {
+  display: inline-block;
+  width: 0;
+  height: 0.2222222222rem;
+  background: #FEDB3F;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.player__volume-color {
+  display: inline-block;
+  width: 40%;
+  height: 0.2222222222rem;
+  background: #FEDB3F;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 
 .products-menu__section {
